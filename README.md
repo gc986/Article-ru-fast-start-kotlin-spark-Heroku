@@ -35,5 +35,5 @@
         </execution>
     </executions>
 </plugin>
-<pre>
+</pre>
 </i>
