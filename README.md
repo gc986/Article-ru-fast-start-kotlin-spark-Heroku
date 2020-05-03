@@ -11,29 +11,27 @@
 
 Переходим в pom.xml, чтобы внести необходимые изменения.
 Во первых, чтобы проект собирался в независимый JAR файл (со всеми зависимостями), добавляем необходимый плагин, в блок \<plugins\>:
-'
-<i>
-    /<plugin/>
-	/<groupId/>org.apache.maven.plugins/</groupId/>
-        /<artifactId/>maven-assembly-plugin/</artifactId/>
-	/<version/>3.2.0/</version/>
-        /<executions/>
-	    /<execution/>
-    	        /<id/>make-assembly/</id/>
-        	/<phase/>package/</phase/>
-        	/<goals/> /<goal/>single/</goal/> /</goals/>
-        	/<configuration/>
-            	    /<archive/>
-                	/<manifest/>
-                    	    /<mainClass/>ru.gc986.HelloKt/</mainClass/>
-                	/</manifest/>
-            	    /</archive/>
-            	    /<descriptorRefs/>
-                	/<descriptorRef/>jar-with-dependencies/</descriptorRef/>
-            	    /</descriptorRefs/>
-        	/</configuration/>
-    	    /</execution/>
-	/</executions/>
-/</plugin/>
-</i>
-'
+```xml
+<plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-assembly-plugin</artifactId>
+    <version>3.2.0</version>
+    <executions>
+        <execution>
+            <id>make-assembly</id>
+            <phase>package</phase>
+            <goals> <goal>single</goal> </goals>
+            <configuration>
+                <archive>
+                    <manifest>
+                        <mainClass>ru.gc986.HelloKt</mainClass>
+                    </manifest>
+                </archive>
+                <descriptorRefs>
+                    <descriptorRef>jar-with-dependencies</descriptorRef>
+                </descriptorRefs>
+            </configuration>
+        </execution>
+    </executions>
+</plugin>
+```
