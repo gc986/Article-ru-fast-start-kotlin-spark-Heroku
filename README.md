@@ -6,3 +6,32 @@
 
 Сначала создаём Maven проект в  IntellijIdea CE, используя шаблон kotlin-archetype-jvm
 <img src="images/1.png" alt="Создание проекта в IntellijIdea">
+
+Далее указываем имя проекта и место его расположения (я назвал проект Hellohabrahabr).
+
+Переходим в pom.xml, чтобы внести необходимые изменения.
+Во первых, чтобы проект собирался в независимый JAR файл (со всеми зависимостями), добавляем необходимый плагин, в блок <plugins>:
+'
+<plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-assembly-plugin</artifactId>
+    <version>3.2.0</version>
+    <executions>
+        <execution>
+            <id>make-assembly</id>
+            <phase>package</phase>
+            <goals> <goal>single</goal> </goals>
+            <configuration>
+                <archive>
+                    <manifest>
+                        <mainClass>ru.gc986.HelloKt</mainClass>
+                    </manifest>
+                </archive>
+                <descriptorRefs>
+                    <descriptorRef>jar-with-dependencies</descriptorRef>
+                </descriptorRefs>
+            </configuration>
+        </execution>
+    </executions>
+</plugin>
+'
