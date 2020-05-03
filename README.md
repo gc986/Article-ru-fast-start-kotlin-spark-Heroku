@@ -11,7 +11,7 @@
 
 Переходим в pom.xml, чтобы внести необходимые изменения.
 Во первых, чтобы проект собирался в независимый JAR файл (со всеми зависимостями), добавляем необходимый плагин, в блок \<plugins\>:
-'
+'''
 <plugin>
     <groupId>org.apache.maven.plugins</groupId>
     <artifactId>maven-assembly-plugin</artifactId>
@@ -34,4 +34,4 @@
         </execution>
     </executions>
 </plugin>
-'
+'''
