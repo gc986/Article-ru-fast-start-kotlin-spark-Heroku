@@ -6,7 +6,7 @@
 
 <h2>1 - Создание простого Spark приложения</h2>
 
-Сначала создаём Maven проект в  IntellijIdea CE, используя шаблон kotlin-archetype-jvm
+Запускаем IntellijIdea CE и создаём Maven проект, используя шаблон kotlin-archetype-jvm
 <img src="images/1.png" alt="Создание проекта в IntellijIdea">
 
 Далее указываем имя проекта и место его расположения (я назвал проект Hellohabrahabr).
