@@ -119,4 +119,4 @@ web: java -jar target/Hellohabrahabr-1.0-SNAPSHOT-jar-with-dependencies.jar $POR
 
 <b>Репозиторий с проектом Kotlin-Spark - https://github.com/gc986/Hellohabrahabr</b>
 
-#kotlin #heroku #server #procfile #maven #IntellijIdea #сервер
+#kotlin #heroku #server #procfile #maven #IntellijIdea #faststart #сервер #быстрыйстарт
